@@ -8,8 +8,8 @@ def box_with_hole():
         [0, 10, 0, 0],  # define edges like so: [x_a, y_a, x_b, y_b]
         [0, 0, 10, 0],  # (x_a, y_a) is the starting point of the edge
         [10, 0, 10, 10],  # (x_b, y_b) is the end point
-        [0, 10, 4, 10],
-        [6, 10, 10, 10]
+        [0, 10, 3, 10],
+        [7, 10, 10, 10]
     ])
 
 def corridor():
