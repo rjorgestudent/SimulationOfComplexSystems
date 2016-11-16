@@ -1,7 +1,7 @@
 import numpy as np
 
 
-HOLE_DIST = 0.2
+PT_DIST = 0.2
 
 def box_with_hole():
     return _edges_to_points([
@@ -24,7 +24,7 @@ def _edges_to_points(edges):
         pt_a = pt_a.reshape(1, 2)
         pt_b = pt_b.reshape(1, 2)
         dist = np.linalg.norm(pt_b - pt_a)
-        edge_range = (np.arange(0, dist, HOLE_DIST) / dist).reshape(-1, 1)
+        edge_range = (np.arange(0, dist, PT_DIST) / dist).reshape(-1, 1)
         dotted_edge_except_last_point = pt_a + edge_range * (pt_b - pt_a)
         return np.vstack([dotted_edge_except_last_point, pt_b])
 
